@@ -29,7 +29,7 @@ function changingImage(str){
     image.src=`${str[0].toLowerCase()+str.slice(1)}.png`;
 }
 async function checkWeather(c){
-    const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${c}&appid=194c1c4cd79bb1b7b29552ab7ab4fab2&units=metric`);
+    const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${c}&appid=${token}&units=metric`);
     if(!response.ok){
         alert('City not found');
         return;
